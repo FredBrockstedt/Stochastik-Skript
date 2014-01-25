@@ -120,12 +120,12 @@ breaklinks=true,pdfborder={0 0 0},backref=page,colorlinks=true]
       $\omega: [0,1] \rightarrow \mathbb{R}$
     \end{center}
     z.B.: $\omega(t)=$ Aktienkurs zur Zeit $t \in [0,1]$\\\\\\
-    Vereinbarung: Wir nennen $\omega \in \Omega$ ein \underline{\textit{Elementarereignis}}.\index{Elementarereignis}
+    Vereinbarung: Wir nennen $\omega \in \Omega$ ein \emph{Elementarereignis}.\index{Elementarereignis}
   \end{itemize}
 \end{example}
 % \textbf{Definition 1.1.2}\\\\
 \begin{defn} % flashcard-name: Ereignis
-  Eine Teilmenge $A \in \Omega$ heißt ein \underline{\textit{Ereignis}}. \index{Ereignis}
+  Eine Teilmenge $A \in \Omega$ heißt ein \emph{Ereignis}. \index{Ereignis}
   Wir sagen, ein Ereignis tritt ein, falls für das realisierte Elementarereignis $\omega \in \Omega$ gilt: $\omega \in A$.
   \begin{itemize}
   \item[i)] unmögliches Ereignis: $A=\emptyset$
@@ -196,7 +196,7 @@ Bisher haben wir die Eingangs gestellte Frage "Was kann passieren?" behandelt un
   \mathcal{P}(\Omega)$ eine $\sigma$-Algebra. Eine
   Funktion:\begin{center} $P: \mathcal{A} \rightarrow \mathbb{R}_+$
   \end{center}
-  heißt ''Maß'' auf $\mathcal{A}$ falls folgendes gilt:
+  heißt ''Maß'' \index{Maß} auf $\mathcal{A}$ falls folgendes gilt:
   \begin{itemize}
   \item[i)] $P(\emptyset)=0$
   \item[ii)] $P\left(\stackrel{\cdot}{\bigcup\limits_{i \in \mathbb{N}}}A_i\right)=\sum\limits_{i=1}^\infty P(A_i)$\\
@@ -213,7 +213,9 @@ Bisher haben wir die Eingangs gestellte Frage "Was kann passieren?" behandelt un
     $\mathcal{A}=\mathcal{P}(\Omega)=\{\emptyset,\{0\},\{1\},\{0,1\}\}$
     \qquad $P(\{0\})=P(\{1\})=\frac{1}{2}$ \qquad ''faire'' Münze
   \item[iii)] Modell für $\infty$-viele Münzwürfe
-    Wie oben gilt: $\Omega=\{0,1\}^\mathbb{N}$. Wir konstruieren nun $\mathcal{A}$ indem wir einen Erzeuger angeben. Wir wählen als Erzeuger die Menge der \textit{\underline{Zylindermengen}}, die wie folgt definiert ist:
+    Wie oben gilt: $\Omega=\{0,1\}^\mathbb{N}$. Wir konstruieren nun
+    $\mathcal{A}$ indem wir einen Erzeuger angeben. Wir wählen als
+    Erzeuger die Menge der \index{Zylindermenge} \emph{Zylindermengen}, die wie folgt definiert ist:
     \begin{center}
       $\mathcal{A}_0=\{B\subset \Omega|\exists n \in \mathbb{N}_0 \text{ und } B_0 \text{ mit } B=B_0\times\{0,1\}\times \{0,1\}\times\dots \} $
     \end{center}
@@ -253,14 +255,14 @@ lies: die Wahrscheinlichkeit, dass bei unendliche vielen Würfen gleich oft 0 un
 \begin{defn}  % flashcard-name: additiv, iso- und antiton stetig
   Sei $P:\mathcal{A} \to \mathbb{R}_+$ mit $P(\Omega)=1$.
   \begin{itemize}
-  \item[i)] $P$ heißt \index{additiv}\underline{additiv} falls: $P(A\cup B)=P(A)+P(B) \qquad \forall~ A,B\in\mathcal{A} $ mit $A\cap B =\emptyset$ gilt. 
-  \item[ii)] $P$ heißt \index{isoton stetig}\underline{isoton stetig}
+  \item[i)] $P$ heißt \index{additiv}\emph{additiv} falls: $P(A\cup B)=P(A)+P(B) \qquad \forall~ A,B\in\mathcal{A} $ mit $A\cap B =\emptyset$ gilt. 
+  \item[ii)] $P$ heißt \index{isoton stetig}\emph{isoton stetig}
     falls für alle (isotonen) Folgen:
     \begin{center}
       $A_1 \subseteq A_2 \subseteq A_3 \subseteq \dots$
     \end{center}
     mit $A_n \nearrow \bigcup\limits_{i=1}^\infty A_i$ gilt $P\left(\bigcup\limits_{i=1}^\infty A_i\right)=\lim\limits_{n \to \infty}P(A_n)$.
-  \item[iii)] $P$ heißt \underline{antiton stetig} \index{antiton stetig}falls für alle
+  \item[iii)] $P$ heißt \emph{antiton stetig} \index{antiton stetig}falls für alle
     (antitonen) Folgen:
     \begin{center}
       $\dots A_i \supseteq A_{i+1} \supseteq A_{i+2} \supseteq \dots$
@@ -431,7 +433,7 @@ Es gilt:
 \item[c)] Seien $\overline{A}_i\cap \overline{A}_j=\emptyset$ für $i\neq j$ dann gilt:
   \[\overline{P}\left((\bigcup\limits_{i=1}^n \overline{A}_i \right)=P\left(T^{-1}\left(\bigcup\limits_{i=1}^n \overline{A}_i\right)\right)=P\left(\bigcup\limits_{i=1}^n T^{-1}(\overline{A}_i)\right)=\sum\limits_{i=1}^\infty P(T^{-1}(\overline{A}_i))=\sum\limits_{i=1}^\infty \overline{P}(\overline{A}_i)\]
   d.h. also: $\overline{P}$ ist ein Wahrscheinlichkeitsmaß. Das heißt
-  $T$ induziert ein Maß auf
+  $T$ induziert ein Maß \index{Maß} auf
   $(\overline{\Omega},\overline{\mathcal{A}})$ mit
   $\overline{\mathcal{P}}=T(P)$:
   \[(\Omega, \mathcal{A}, P)
@@ -544,7 +546,9 @@ Sei $(\Omega,\mathcal{A},P)$ ein Wahrscheinlichkeitsraum.
     \text{oder}\\
     X:(\Omega,\mathcal{A}) \to (\overline{\mathbb{R}},\mathcal{B}(\overline{\mathbb{R}}))\\
   \end{eqnarray*}
-  wobei $\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty \}$, heißt Zufallsvariable. Das Maß $P^X(\cdot)=P\circ X^{-1}$ heißt Verteilung von $X$ unter $P$.
+  wobei $\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty \}$, heißt
+  Zufallsvariable \index{Zufallsvariable}. Das Maß $P^X(\cdot)=P\circ
+  X^{-1}$ heißt Verteilung \index{Verteilung} von $X$ unter $P$.
 \end{defn}
 % \textbf{Bemerkung 1.4.2}\\\\
 \begin{rem}
@@ -613,7 +617,7 @@ Klar für $X=\1_A$ gilt $\mathbb{E}[\1_A]=P(A)$.
     $X=\sum\limits_{i=1}^n\alpha_i\1_{A_i}$ (*) mit $\bigcup_i^\cdot
     A_i=\Omega$
   \end{center}
-  so heißt (*) eine Normaldarstellung. Normaldarstellungen sind nicht eindeutig, es gilt jedoch:
+  so heißt (*) eine Normaldarstellung \index{Normaldarstellung}. Normaldarstellungen sind nicht eindeutig, es gilt jedoch:
 \end{defn}
 % \textbf{Lemma 1.4.5}\\\\
 \begin{lem}  % flashcard-name: Summen und Grenzwerte von Normaldarstellungen
@@ -652,7 +656,7 @@ Klar für $X=\1_A$ gilt $\mathbb{E}[\1_A]=P(A)$.
   \begin{center}
     $X=\sum\limits_{i=1}^n\alpha_i\1_{A_i}$
   \end{center}
-  so heißt: $\mathbb{E}[X]:=\sum\limits_{i=1}^n\alpha_iP(A_i)$ der \underline{Erwartungswert}.
+  so heißt: $\mathbb{E}[X]:=\sum\limits_{i=1}^n\alpha_iP(A_i)$ der \emph{Erwartungswert}.
 \end{defn}
 % \textbf{Satz 1.4.7} 
 \begin{prop}[Eigenschaften des Erwartungswertes] \index{Erwartungswert}
@@ -863,7 +867,7 @@ Der Erwartungswert ist ein lineares monotones Funktional. Ist $\Omega<\infty$ so
 % \Large{\textbf{1.5 Ungleichungen}}\normalsize\\\\\\
 % \textbf{Satz 1.5.1}\\\\
 
-\begin{prop} \index{Zufallsvariable} % flashcard-name: Wie kann man ein Wahrscheinlichkeitsmaß abschätzen?
+\begin{prop} \index{Markov-Ungleichung} % flashcard-name: Wie lautet die Markov-Ungleichung?
   Sei $X$ eine Zufallsvariable, $h$ eine auf $X(\Omega)$ isotone, nicht negative
   Funktion. Dann gilt für alle $c \in X(\Omega)$:
   \begin{center}
@@ -905,7 +909,7 @@ Der Erwartungswert ist ein lineares monotones Funktional. Ist $\Omega<\infty$ so
     P(|X|<\infty)=1$.
   \end{proof}
   Für ein Ereignis $\{X\in A\}$ mit $P(X \in A)=1$ schreiben wir P-fast sicher oder P-fs.
-\item[2)] Cebysev-Ungleichung\\
+\item[2)] Cebysev-Ungleichung\\ \index{Cebysev-Ungleichung}
   Für $h(x)=x^2$ und $X \in \mathcal{L}^1$ gilt
   \begin{center}
     $P(|X-\mathbb{E}X|)\geq c) \leq
@@ -1000,7 +1004,7 @@ Ausblick: Wiederholte Experimente
 Sei $X \in \mathcal{L}^1$, dann heißt 
 \begin{center}
   $Var(x)=\mathbb{E}((X-\mathbb{E}X)^2)$ die Varianz von X\\
-  $\sigma(X)=\sqrt{Var(X)}$ heißt Streuung (Standartabweichung)
+  $\sigma(X)=\sqrt{Var(X)}$ heißt Streuung (Standardabweichung) \index{Streuung}\index{Standardabweichung}
 \end{center} 
 % \textbf{Bemerkung 1.6.2}\\\\
 \begin{rem}
@@ -1268,7 +1272,7 @@ Wir folgern das starke Gesetz der großen Zahlen. \index{starke Gesetz der groß
 \label{sec:konvergenz}
 % \Large{\textbf{1.8. Vergleich von Konvergenzbegriffen}}\normalsize\\\\
 % \textbf{Definition 1.8.1}\\\\
-\begin{defn} \index{konvergenz im $p$-ten Mittel} \index{stochastische Konvergenz} % flashcard-name: Wann konvergiert die Folge $(X_n)_{n \in \N}$ stochstisch, fast-sicher, im p-ten Mittel
+\begin{defn} \index{Konvergenz im $p$-ten Mittel} \index{stochastische Konvergenz} % flashcard-name: Wann konvergiert die Folge $(X_n)_{n \in \N}$ stochstisch, fast-sicher, im p-ten Mittel
   Seien $X_1,X_2,\ldots$ Zufallsvariablen auf $(\Omega,\mathcal{A},P)$. Die Folge
   $(X_n)_{n \in \N}$ konvergiert
   \begin{itemize}
@@ -1361,7 +1365,7 @@ Ziel: $L^1$-Konvergenz $\Leftrightarrow$ stochastisch + ,,etwas''
 % \textbf{Definition 1.8.3}\\\\
 \begin{defn}  % flashcard-name: gleichmäßig integrierbar
   Sei $I$ eine Indexmenge. Eine Familie $(X_i)_{i \in I}$ von Zufallsvariablen
-  heißt gleichmäßig integrierbar (GI) falls gilt
+  heißt \index{gleichmäßig integrierbar} gleichmäßig integrierbar (GI) falls gilt
   \begin{center}
     $\lim\limits_{c \to \infty} \sup\limits_{i \in I}
     \underbrace{\int\limits_{\{|X_i|\geq
@@ -1570,10 +1574,10 @@ Sei $(\Omega,\mathcal{A},P)$ ein Wahrscheinlichkeitsraum, $X:\Omega \to \overlin
 \end{rem}
 % \textbf{Definition 9.4}\\\\
 \begin{defn} \index{diskret} \index{Sprungfunktion} \index{Treppenfunktion}  % flashcard-name: Diskret und Treppenfunktionen
-  $F$ bzw $\mu$ heißen \underline{diskret}, wenn es eine abzählbare
+  $F$ bzw $\mu$ heißen \emph{diskret}, wenn es eine abzählbare
   Menge $S \subset \R$ mit $\mu(S)=1$ gibt. In diesem Fall gilt: $\mu$
   ist eindeutig bestimmt über $\mu(\{x\})$ für $x \in S$ und $F$ ist
-  \underline{Sprungfunktion} oder \underline{Treppenfunktion} mit der
+  \emph{Sprungfunktion} oder \emph{Treppenfunktion} mit der
   Darstellung.
   \begin{center}
     $F(x)=\sum\limits_{y \in S} \mu(\{y\})$
@@ -1586,8 +1590,8 @@ Sei $(\Omega,\mathcal{A},P)$ ein Wahrscheinlichkeitsraum, $X:\Omega \to \overlin
 \end{example}
 % \textbf{Definition 9.5}\\\\
 \begin{defn} \index{Dichtefunktion}  % flashcard-name: absolut stetig
-  $F$ bzw. $\mu$ heißen \underline{absolut stetig} wenn es eine
-  messbare Funktion $f\geq 0$ (genannt \underline{Dichtefunktion})
+  $F$ bzw. $\mu$ heißen \emph{absolut stetig} wenn es eine
+  messbare Funktion $f\geq 0$ (genannt \emph{Dichtefunktion})
   gibt, so dass gilt:
   \begin{center}
     \[F(x)=\int\limits_{-\infty}^xf(t)dt\] für alle $x \in \R$
@@ -1810,7 +1814,7 @@ Falls gilt: $F(b)-F(b_-)=\mu(\{b\})=0$ ist $F$ an der Stelle $b$ stetig und $\mu
 Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Mengen sind wichtig!
 % \textbf{Definition 10.2.1}\\\\
 \begin{defn}  % flashcard-name: Was bedeutet $\mu$-randlos
-  Eine Menge $A \in B(S)$ heißt $\mu$-randlos falls
+  Eine Menge $A \in B(S)$ heißt \index{$\mu$-randlos} $\mu$-randlos falls
   \begin{center}
     $\mu(\partial A)=0$ 
   \end{center}
@@ -2186,7 +2190,7 @@ D(M)={\displaystyle \bigcap_{\substack{D-\text{Dynkinsystem}\\
   $B(\mathbb{R})$ überein,
   also $\mu=\nu$. \\
   Ein Vektorraum $\mathcal{H}$ reeller Funktionen $f$ auf $S$ heißt
-  monotoner Vektorraum (MVR) falls mit $f_{n}\in\mathcal{H}$ und
+  monotoner Vektorraum \index{monotoner Vektorraum} (MVR) falls mit $f_{n}\in\mathcal{H}$ und
   $f_{n}\nearrow f$
   beschränkt auch $f\in\mathcal{H}$gilt.
 \end{example}
@@ -2223,7 +2227,7 @@ enthalten. Z.z.
 denn $B(\mathbb{R})$ wird erzeugt von offenen Mengen, also von Indikator-Funktionen
 $1_{U}$mit $U$ offen. Also $\sigma(C_{b}(S))\subseteq B(\mathbb{R})$.\\
 
-Für $"\supseteq"$ sei $U$ offen und definiert
+Für $"\supseteq" $ sei $U$ offen und definiert
 \[
 f(\cdot)=\min{d(\cdot,U^{c}),1}\in C_{b}(S)
 \]
@@ -2321,8 +2325,7 @@ gegeben.
 
   Seien $B_{n}\left(n\in\mathbb{N}\right)$ unabhängige $\sigma$-Algebren.
   ($B_{n}=$die zur Zeit $n$ observierbaren Ereignisse). Die \emph{terminale}
-  \index{terminale sigma
-    -Algebra@\emph{terminale $\sigma$-Algebra}} $\sigma$-Algebra (,,tail field``) ist gegeben durch
+  \index{terminale sigma} $\sigma$-Algebra (,,tail field``) ist gegeben durch
   \[
   \bigcap_{n\in\mathbb{N}}\sigma\left(\bigcup_{m\geq n}B_{m}\right)=:B_{\infty}
   \]
@@ -2330,16 +2333,13 @@ gegeben.
   Im Münzwurfmodel
   \begin{itemize}
   \item $\left\{ \omega\in\left\{ 0,1\right\} ^{\mathbb{N}}|\lim_{n\to\infty}\frac{1}{n}\sum_{i=1}^{n}X_{i}\left(\omega\right)\text{ existiert}\right\} $
-  \item $\limsup_{i\to\infty}\left\{ X_{i}=1\right\} $ ($+1$ kommt unendlich
-    oft vor) 
+  \item $\limsup_{i\to\infty}\left\{ X_{i}=1\right\} $ ($+1$ kommt unendlich oft vor) 
   \end{itemize}
 \end{rem}
-\begin{prop}[0-1-Gesetz von Kolmogorov]
+\begin{prop}[0-1-Gesetz von Kolmogorov] \index{0-1 Gesetz von Kolmogorov}
   \begin{comment}
     Eigentlich Satz 1.6
   \end{comment}
-
-
   Für alle $A\in B_{\infty}$ gilt
   \[
   P\left(A\right)\in\left\{ 0,1\right\} 
@@ -2460,7 +2460,8 @@ verteilt (iid). Dann gilt
 Empirisches Mittel $\to$erwartetes Resultat eines einzelnen Versuches.
 \begin{defn}  % flashcard-name: Wie ist Unabhängigkeit definiert?
   Eine Familie $\left(X_{i}\right)_{i\in I}$ von Zufallvariabeln auf
-  $\left(\Omega,\mathcal{A},\mathbb{P}\right)$ heißt unabhängig, falls
+  $\left(\Omega,\mathcal{A},\mathbb{P}\right)$ heißt
+  \index{unabhängig} unabhängig, falls
   die von den Zufallsvariablen erzeugten Familie von $\sigma$-Algebren
   \[
   \left(\sigma\left(X_{i}\right)\right)_{i\in I}\ \left(\sigma\left(X_{i}\right)=\left\{ \left\{ x\in A|A\in\mathcal{B}\left(\overline{\mathbb{R}}\right)\right\} \right\} \right)
@@ -2937,7 +2938,7 @@ S_{n}:=\sum_{i=1}^{n}X_{i}
 wenn die Verteilung der $X_{i}$ bekannt ist?
 \begin{defn}   % flashcard-name: Wie ist Verteilung definiert?
   Seien $X_{1}\ldots X_{n}$ reelwertige Zufallsvariablen auf $\left(\Omega,\mathcal{A},P\right)$.
-  Dann heißt die Verteilung 
+  Dann heißt die Verteilung \index{Verteilung}
   \[
   \bar{\mu}:=P\circ\bar{X}^{-1}
   \]
@@ -3766,7 +3767,7 @@ da $\hat{\mu}_{n}$ erwartungstreuer Schätzer
 \begin{defn}
 Seien $\hat{G}_{n}\left(X^{(n)}\right)$ und $G_{n}^{*}\left(X^{(n)}\right)$
 erwartungstreue Schätzer für $g\left(\theta\right)$. Es heißt $\hat{G}_{n}$
-\emph{besser} als $G_{n}^{*}$, falls 
+\emph{besser} \index{besser} als $G_{n}^{*}$, falls 
 \[
 Var\left(\hat{G}_{n}\right)\leq Var\left(G_{n}^{*}\right)
 \]
