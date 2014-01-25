@@ -7,7 +7,8 @@
 \usepackage{amsthm}
 \usepackage{mathrsfs}
 \usepackage{ulem}
-\author{Maik Pickl und Fred Brockstedt}
+%\usepackage{emph}
+\author{Maik Pickl und Fred Brockstedt \\ HU-Berlin.de}
 
 \title{Stochastik}
 \newcommand{\E}{\mathbb{E}}
@@ -74,6 +75,9 @@ breaklinks=true,pdfborder={0 0 0},backref=page,colorlinks=true]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Dokument
 \begin {document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TItel
+\maketitle{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Inhaltsverzeichnis
 
@@ -998,6 +1002,7 @@ Ausblick: Wiederholte Experimente
   in welchem Sinn?\\
   $\Rightarrow$ Konvergenz von Zufallsvariablen
 \item Wie gut ist diese Approximation? (Zentraler Grenzwertsatz)
+  \index{Zentraler Grenzwertsatz}
 \end{itemize}
 
 % \textbf{Definition 1.6.1}\\\\
@@ -1967,9 +1972,9 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
   \end{itemize}
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Vorlesung vom 27.5.2013
-%\textbf{Korollar 10.4}\\\\
+% \textbf{Korollar 10.4}\\\\
 \begin{cor}
   Sei $(\Sigma,\mathcal{A},P)$ ein W'Raum $X_n$ ($n \in \N$), $X$ ZVn
   mit Werten in $S$. Seien $\mu_n$ bzw. $\mu$ die entsprechenden
@@ -1978,7 +1983,7 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
     $X_n \overset{P}{\to} X \Rightarrow \mu_n \overset{w}{\to} \mu$
   \end{center}
 \end{cor}
-%\textit{Beweis}\\\\
+% \textit{Beweis}\\\\
 \begin{proof} \ 
   Sei $f \in C_b(S)$ gleichmäßig stetig, d.h.
   \begin{center}
@@ -2008,7 +2013,7 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
     $\mu_n(f) \to \mu(f) \qquad \forall f \in C_0(S)$
   \end{center}
 \end{proof}
-%\textbf{Korollar 10.5}\\\\
+% \textbf{Korollar 10.5}\\\\
 \begin{cor}
   Seien $\mu_n,\mu$ Wahrscheinlichkeitsmaße auf $(\Sigma,\mathcal{A})$ mit
   Verteilungsfunktion $F_n,F$. Dann sind äquivalent
@@ -2020,7 +2025,7 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
     $\mu$-randlosen $(-\infty,a]$
   \end{itemize}
 \end{cor}
-%\textit{Beweis}\\\\
+% \textit{Beweis}\\\\
 \begin{proof} \ 
   \begin{itemize}
   \item[1)$\Rightarrow$2)] Übung (Blatt 7)
@@ -2040,8 +2045,8 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
     \begin{center}
       $F_n(x) \overset{n \to \infty}{\to} F(x)$
     \end{center}
-    \item[3)$\Rightarrow$4)] Ist $(a,b]~\mu$-randlos, so gilt $\mu(\{a\})=\mu(\{b\})=0$ d.h. $a$ und $b$ sind Stetigkeitsstellen von $F$. Also wie in 2)$\Rightarrow$3)\\\\
-    \item[4)$\Rightarrow$1)] Sei $D=\{x \in \R $ mit $\mu(\{x\})=0\}$. Wie im
+  \item[3)$\Rightarrow$4)] Ist $(a,b]~\mu$-randlos, so gilt $\mu(\{a\})=\mu(\{b\})=0$ d.h. $a$ und $b$ sind Stetigkeitsstellen von $F$. Also wie in 2)$\Rightarrow$3)\\\\
+  \item[4)$\Rightarrow$1)] Sei $D=\{x \in \R $ mit $\mu(\{x\})=0\}$. Wie im
     Portemonteau-Theorem zeigt man $\R\setminus D$ ist abzählbar. Also
     liegt $D$ dicht in $\R$. Sei nun $f \in C_0(\R))$ (glm. stetig!)
     und finde
@@ -2061,25 +2066,25 @@ Schlußfolgerung: Unstetigkeitsstellen von $F$ und das Maß von Rändern von Men
       &\leq & 2\epsilon + \sum\limits_{k=1}^m f(c_{k-1})|\mu_n((c_{k-1},c_k])-\mu((c_{k-1},c_k])|
     \end{eqnarray*}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Nachtrag Vorlesung 27.5.2013
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    %% Nachtrag Vorlesung 27.5.2013
 
-Da $C_{k}\in D$ für $k=0,\ldots,m$ ist $(c_{k-1},c_{k}]$ $\mu-$randlos.
-Also nach Vorraussetzung (4)
+    Da $C_{k}\in D$ für $k=0,\ldots,m$ ist $(c_{k-1},c_{k}]$ $\mu-$randlos.
+    Also nach Vorraussetzung (4)
 
-\[
-\mu_{n}((c_{k-1},c_{k}])\to\mu((c_{k-1},c_{k}])
-\]
+    \[
+    \mu_{n}((c_{k-1},c_{k}])\to\mu((c_{k-1},c_{k}])
+    \]
 
 
-Offensichtlich muss gelten
-\[
-\mu(f)=\nu(f)\qquad\forall f\in C_{b}(S)
-\]
+    Offensichtlich muss gelten
+    \[
+    \mu(f)=\nu(f)\qquad\forall f\in C_{b}(S)
+    \]
 
-\[
-\Rightarrow\mu=\nu
-\]
+    \[
+    \Rightarrow\mu=\nu
+    \]
 
   \end{itemize}
 \end{proof}
@@ -2110,7 +2115,7 @@ Dann gilt
       \bigcup_{n}^{\cdot}A_{n}\in D}$
   \end{itemize}
 \end{defn}
-%\textbf{Beispiel 11.2}
+% \textbf{Beispiel 11.2}
 \begin{example}
   Seien $\mu_{1},\mu_{2}$Wahrscheinlichkeitsmaße auf $(\Omega,\mathcal{A}).$Dann ist
   \[
@@ -2120,12 +2125,12 @@ Dann gilt
 
   ein Dynkin-System.
 \end{example}
-%\textbf{Bemerkung 11.3}
+% \textbf{Bemerkung 11.3}
 \begin{rem}
   $\cap$-stabile Dynkin-Systeme sind $\sigma$-Algebren.
 \end{rem}
 
-%\emph{Beweis}
+% \emph{Beweis}
 \begin{proof}
   Seien $A,B\in D$. Dann gilt
   \begin{align*}
@@ -2146,23 +2151,23 @@ Dann gilt
 
   wobei $A'_{n}=A_{1}\cup\ldots\cup A_{n}$und $A_{o}=\emptyset$.
 \end{proof}
-%\textbf{Satz 11.4}\\
+% \textbf{Satz 11.4}\\
 \begin{prop}
   Ist $M\subseteq\mathcal{P}(\Omega)$$\cap$-stabil. Dann gilt
 
-\[
-D(M)={\displaystyle \bigcap_{\substack{D-\text{Dynkinsystem}\\
-      M\subseteq D } }D=\sigma(M)}
-\]
+  \[
+  D(M)={\displaystyle \bigcap_{\substack{D-\text{Dynkinsystem}\\
+        M\subseteq D } }D=\sigma(M)}
+  \]
 \end{prop}
-%\textbf{Korollar 11.5}\\
+% \textbf{Korollar 11.5}\\
 \begin{prop}
   Seien $\mu_{1},\mu_{2}$ Wahrscheinlichkeitsmaße auf $(\Omega,\mathcal{A})$ und
   $\mathcal{A}=\sigma(\mathcal{A}_{0})$,
   $\mathcal{A}_{0}$ $\cap$-stabil. Dann gilt $\mu_{1}=\mu_{2}$ auf
   $\mathcal{A}_{0}\Rightarrow\mu_{1}=\mu_{2}$ auf $\mathcal{A}$.
 \end{prop}
-%\emph{Beweis}
+% \emph{Beweis}
 \begin{proof}
   Es ist $D={A\in\mathcal{A}|\mu_{1}(A)=\mu_{2}(A)}$ ein Dynkinsystem.
   Nach Vorraussetzung gilt $A_{0}\subseteq D$, $D(A_{0})\subseteq D$
@@ -2175,7 +2180,7 @@ D(M)={\displaystyle \bigcap_{\substack{D-\text{Dynkinsystem}\\
 
   D.h. $\mu_{1}(A)=\mu_{2}(A)\quad\forall A\in\mathcal{A}$.
 \end{proof}
-%\textbf{Beispiel 11.6}\\
+% \textbf{Beispiel 11.6}\\
 \begin{example}
   Es wird $B(\mathbb{R})$ erzeugt von den Mengen
   ${(-\infty,b]|b\in\mathbb{R}}$.  Sei $F$ eine
@@ -2194,7 +2199,7 @@ D(M)={\displaystyle \bigcap_{\substack{D-\text{Dynkinsystem}\\
   $f_{n}\nearrow f$
   beschränkt auch $f\in\mathcal{H}$gilt.
 \end{example}
-%\textbf{Satz 11.7 }\emph{über monotone Klassen}\\
+% \textbf{Satz 11.7 }\emph{über monotone Klassen}\\
 \begin{prop}[über monotone Klassen]
   Sei $\mathcal{A}\subseteq{f:S\to\mathbb{R}|f\text{ ist meßbar und
       beschränkt}}$ mit $f,g\in\mathcal{A}\Rightarrow f\cdot
@@ -3442,11 +3447,11 @@ S\left(T\right)=\int_{0}^{T}\frac{\sin x}{x}dx
   da $\mu\left(\left\{ a\right\} \right)=\mu\left(\left\{ b\right\} \right)=0$. 
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Vorlesung vom 24.6.2013
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Vorlesung vom 24.6.2013
 \paragraph*{Setup:}
 
@@ -3463,13 +3468,13 @@ Y_{n,k}=\frac{X_{k}-\mathbb{E}X_{k}}{\sqrt{Var\left(S_{n}\right)}}\quad\left(k=1
 Dann haben wir ein $\varDelta$-Schema 
 \[
 \begin{matrix}Y_{1,1}\\
-Y_{2,1} & Y_{2,2}\\
-\vdots &  & \ddots\\
-Y_{n,1} & Y_{n,2} & \ldots & Y_{n,n}\\
-\vdots &  &  & \vdots & \ddots
+  Y_{2,1} & Y_{2,2}\\
+  \vdots &  & \ddots\\
+  Y_{n,1} & Y_{n,2} & \ldots & Y_{n,n}\\
+  \vdots &  &  & \vdots & \ddots
 \end{matrix}
 \]
- 
+
 \begin{itemize}
 \item $\mathbb{E}Y_{n,k}=0$
 \item für jedes $n$ sind $Y_{n,1},\ldots,Y_{n,n}$ unabhängig 
@@ -3482,186 +3487,186 @@ und \textbf{(A)} ist äquivalent zu
 und \textbf{(B)} impliziert
 \begin{description}
 \item [{(C)}] 
-\[
-\exists Y\in\mathcal{L}^{2}\mbox{ mit }P_{Y_{n,k}}=P_{\frac{y}{\sqrt{n}}}
-\]
-z.B. $y=\frac{X_{1}-\mathbb{E}X_{1}}{\sqrt{Var\left(X_{1}\right)}}$ \end{description}
+  \[
+  \exists Y\in\mathcal{L}^{2}\mbox{ mit }P_{Y_{n,k}}=P_{\frac{y}{\sqrt{n}}}
+  \]
+  z.B. $y=\frac{X_{1}-\mathbb{E}X_{1}}{\sqrt{Var\left(X_{1}\right)}}$ \end{description}
 \begin{prop}
-\label{prop:5.3}Sei $\left(Y_{n,k}\right)_{k=1}^{n}\ \left(n\in\mathbb{N}\right)$
-ein $\varDelta$-Schema mit obigen Eigenschaften. Und es gelte eine
-der Eigenschaften \textbf{(A')} oder \textbf{(C)}. Dann gilt 
-\[
-P_{S_{n}^{*}}\underset{n\to\infty}{\overset{w}{\longrightarrow}}\mathcal{N}\left(0,1\right)
-\]
+  \label{prop:5.3}Sei $\left(Y_{n,k}\right)_{k=1}^{n}\ \left(n\in\mathbb{N}\right)$
+  ein $\varDelta$-Schema mit obigen Eigenschaften. Und es gelte eine
+  der Eigenschaften \textbf{(A')} oder \textbf{(C)}. Dann gilt 
+  \[
+  P_{S_{n}^{*}}\underset{n\to\infty}{\overset{w}{\longrightarrow}}\mathcal{N}\left(0,1\right)
+  \]
 \end{prop}
 \begin{rem}
- \ 
-\begin{description}
-\item [{(i)}] Zentrale Grenzwert Eigenschaft ist wegen Unabhängigkeit nur
-von der Verteilung der $X_{i}$ abhängig. 
-\item [{(ii)}] Seien $X_{i}\sim\mathcal{N}\left(0,\sigma_{i}^{2}\right)$
-$\left(i=1,\ldots,n\right)$. Dann gilt 
-\[
-\sum_{i=1}^{n}X_{i}\sim\mathcal{N}\left(0,\sum_{i=1}^{n}\sigma_{i}^{2}\right)
-\]
-denn: Es gilt
-\[
-\varphi_{X_{i}}\left(t\right)=e^{-\frac{1}{2}t^{2}\sigma_{i}^{2}}
-\]
-Wegen Unabhängigkeit also
-\[
-\varphi_{X_{1}+\ldots+X_{n}}\left(t\right)=\prod_{i=1}^{n}e^{-\frac{1}{2}t^{2}\sigma_{i}}=e^{-\frac{1}{2}t^{2}\left(\sigma_{1}^{2}+\ldots+\sigma_{n}^{2}\right)}
-\]
-Behauptung folgt aus Eindeutigkeitssatz. \hfill $\Box$
-\end{description}
+  \ 
+  \begin{description}
+  \item [{(i)}] Zentrale Grenzwert Eigenschaft ist wegen Unabhängigkeit nur
+    von der Verteilung der $X_{i}$ abhängig. 
+  \item [{(ii)}] Seien $X_{i}\sim\mathcal{N}\left(0,\sigma_{i}^{2}\right)$
+    $\left(i=1,\ldots,n\right)$. Dann gilt 
+    \[
+    \sum_{i=1}^{n}X_{i}\sim\mathcal{N}\left(0,\sum_{i=1}^{n}\sigma_{i}^{2}\right)
+    \]
+    denn: Es gilt
+    \[
+    \varphi_{X_{i}}\left(t\right)=e^{-\frac{1}{2}t^{2}\sigma_{i}^{2}}
+    \]
+    Wegen Unabhängigkeit also
+    \[
+    \varphi_{X_{1}+\ldots+X_{n}}\left(t\right)=\prod_{i=1}^{n}e^{-\frac{1}{2}t^{2}\sigma_{i}}=e^{-\frac{1}{2}t^{2}\left(\sigma_{1}^{2}+\ldots+\sigma_{n}^{2}\right)}
+    \]
+    Behauptung folgt aus Eindeutigkeitssatz. \hfill $\Box$
+  \end{description}
 \end{rem}
 \begin{proof}
-{[}von Satz \ref{prop:5.3}{]}
-\begin{description}
-\item [{(a)}] Es genügt vage Konvergenz zu beweisen
-\begin{equation}
-\int gd\mu_{n}\to\int gd\mu\quad\forall g\in C_{0}\left(\mathbb{R}\right)\label{eq:5.2*}
-\end{equation}
-wobei $\mu_{n}=\mathbb{P}_{S_{n}^{*}},\mu=\mathcal{N}\left(0,1\right)$\end{description}
-\begin{fact*}
-für jedes $g\in C_{0}\left(\mathbb{R}\right)$ existiert $f\in C_{0}^{\infty}$
-mit $\left|\left|f-g\right|\right|_{\infty}<\varepsilon$
-\end{fact*}
+  {[}von Satz \ref{prop:5.3}{]}
+  \begin{description}
+  \item [{(a)}] Es genügt vage Konvergenz zu beweisen
+    \begin{equation}
+      \int gd\mu_{n}\to\int gd\mu\quad\forall g\in C_{0}\left(\mathbb{R}\right)\label{eq:5.2*}
+    \end{equation}
+    wobei $\mu_{n}=\mathbb{P}_{S_{n}^{*}},\mu=\mathcal{N}\left(0,1\right)$\end{description}
+  \begin{fact*}
+    für jedes $g\in C_{0}\left(\mathbb{R}\right)$ existiert $f\in C_{0}^{\infty}$
+    mit $\left|\left|f-g\right|\right|_{\infty}<\varepsilon$
+  \end{fact*}
 
-D.h. es genügt \ref{eq:5.2*} für Funktionen aus $C_{0}^{\infty}$
-zu beweisen.
-\begin{description}
-\item [{(b)}] Sei $f\in C_{0}^{\infty}$. Taylor-Entwicklung liefert
-\[
-f\left(z+y\right)=f\left(z\right)+f'\left(z\right)\cdot y+\frac{1}{2}f''\left(z\right)\cdot y^{2}+R\left(z,y\right)
-\]
-mit 
-\[
-\left|R\left(z,y\right)\right|=\begin{cases}
-\frac{1}{6}\left|f^{\left(3\right)}\left(\tilde{z}\right)\right|\left|y\right|^{3}\leq c\cdot\left|y\right|^{3} & \mbox{(a) Lagrange Form}\\
-\frac{1}{2}\left|f''\left(\tilde{\tilde{z}}\right)-f''\left(z\right)\right|\cdot y^{2}\le f\left(y\right)\cdot y^{2} & \mbox{(b)}
-\end{cases}
-\]
-wobei $\tilde{z},\tilde{\tilde{z}}$ geeignete Zwischenstellen und
-\[
-\delta\left(y\right)=\inf\left\{ 2\left|\left|f''\right|\right|_{\infty},\left|\left|f^{\left(3\right)}\right|\right|_{\infty}\cdot\left|y\right|\right\} 
-\]
-also insbesondere 
-\[
-\delta\left(y\right)\to0\mbox{ für }y\to0
-\]
+  D.h. es genügt \ref{eq:5.2*} für Funktionen aus $C_{0}^{\infty}$
+  zu beweisen.
+  \begin{description}
+  \item [{(b)}] Sei $f\in C_{0}^{\infty}$. Taylor-Entwicklung liefert
+    \[
+    f\left(z+y\right)=f\left(z\right)+f'\left(z\right)\cdot y+\frac{1}{2}f''\left(z\right)\cdot y^{2}+R\left(z,y\right)
+    \]
+    mit 
+    \[
+    \left|R\left(z,y\right)\right|=\begin{cases}
+      \frac{1}{6}\left|f^{\left(3\right)}\left(\tilde{z}\right)\right|\left|y\right|^{3}\leq c\cdot\left|y\right|^{3} & \mbox{(a) Lagrange Form}\\
+      \frac{1}{2}\left|f''\left(\tilde{\tilde{z}}\right)-f''\left(z\right)\right|\cdot y^{2}\le f\left(y\right)\cdot y^{2} & \mbox{(b)}
+    \end{cases}
+    \]
+    wobei $\tilde{z},\tilde{\tilde{z}}$ geeignete Zwischenstellen und
+    \[
+    \delta\left(y\right)=\inf\left\{ 2\left|\left|f''\right|\right|_{\infty},\left|\left|f^{\left(3\right)}\right|\right|_{\infty}\cdot\left|y\right|\right\} 
+    \]
+    also insbesondere 
+    \[
+    \delta\left(y\right)\to0\mbox{ für }y\to0
+    \]
 
-\item [{(c)}] Wir können, für jedes $n\in\mathbb{N}$, die Zufallsvariablen
-\[
-Y_{n,1},\ldots,Y_{n,n},\tilde{Y}_{n,1},\ldots,\tilde{Y}_{n,n}
-\]
-auf einem Wahrscheinlichkeitsraum $\left(\Omega_{n},\mathcal{A}_{n},\mathbb{P}_{n}\right)$
-realisieren mit 
+  \item [{(c)}] Wir können, für jedes $n\in\mathbb{N}$, die Zufallsvariablen
+    \[
+    Y_{n,1},\ldots,Y_{n,n},\tilde{Y}_{n,1},\ldots,\tilde{Y}_{n,n}
+    \]
+    auf einem Wahrscheinlichkeitsraum $\left(\Omega_{n},\mathcal{A}_{n},\mathbb{P}_{n}\right)$
+    realisieren mit 
 
-\begin{itemize}
-\item $Y_{n,1}\ldots Y_{n,n}$ unabhängig
-\item $\tilde{Y}_{n,k}\sim\mathcal{N}\left(0,Var\left(Y_{n,k}\right)\right)$
-\begin{eqnarray*}
-\Omega_{n} & = & \mathbb{R}^{n}\times\mathbb{R}^{n}\\
-\mathcal{A}_{n} & = & \mathcal{B}\left(\mathbb{R}^{n}\times\mathbb{R}^{n}\right)\\
-\mathbb{P}_{n} & = & \underset{\mbox{Verteilung von }Y_{n,1}}{\underbrace{\nu_{1}\otimes\ldots\otimes\nu_{n}}\otimes\tilde{\nu_{1}}\otimes\ldots\otimes\tilde{\nu}_{n}\leftarrow\mathcal{N}\left(0,Var\left(Y_{n,n}\right)\right)}
-\end{eqnarray*}
-und 
-\[
-\omega=\left(y_{1},\ldots,y_{n},\tilde{y}_{1},\ldots,\tilde{y}_{n}\right)
-\]
-sei 
-\[
-Y_{n,k}\left(\omega\right)=y_{k},\tilde{Y}_{n,k}\left(\omega\right)=\tilde{y}_{k}
-\]
-Dann gilt
-\[
-\tilde{S}_{n}=\tilde{Y}_{n,1}+\ldots+\tilde{Y}_{n,n}\sim\mathcal{N}\left(0,1\right)
-\]
-Wir vergleichen $\tilde{S}_{n}$ mit $S_{n}^{*}$
-\end{itemize}
-\item [{(d)}] Sei dazu 
-\[
-Z_{k}^{n}=\tilde{Y}_{n,1}+\ldots+\tilde{Y}_{n,\underline{k-1}}+Y_{n,\underline{k+1}}+\ldots+Y_{n,n}
-\]
-Dann gilt
-\begin{eqnarray*}
-\left|\int fd\mu_{n}-\int fd\mu\right| & = & \left|\mathbb{E}_{n}\left[f\left(S_{n}^{*}\right)\right]-\mathbb{E}_{n}\left[f\left(\tilde{S}_{n}\right)\right]\right|\\
- & \leq & \left|\mathbb{E}_{n}\left[f\left(S_{n}^{*}\right)-f\left(\tilde{S}_{n}\right)\right]\right|\\
- & = & \left|\mathbb{E}_{n}\left[\sum_{k=1}^{n}f\left(\underset{=A_{k}}{\underbrace{Z_{k}^{n}+Y_{n,k}}}\right)-f\left(\underset{=B_{k}}{\underbrace{Z_{k}^{n}+\tilde{y}_{n,k}}}\right)\right]\right|
-\end{eqnarray*}
-wobei $\mathbb{E}_{n}$ den Erwartungswert bzgl. $\mathbb{P}_{n}$
-bezeichnet und 
-\[
-A_{k}=B_{k-1}
-\]
-dies folgt aus 
-\[
-Z_{k}^{n}=\tilde{Y}_{n,1}+\ldots+\underset{A_{k}}{\underbrace{\tilde{Y}_{n,\underline{k-1}}}}+\underset{B_{k}}{\underbrace{Y_{n,k}}}+Y_{n,\underline{k+1}}+\ldots+Y_{n,n}
-\]
-Taylor liefert 
-\begin{eqnarray*}
-f\left(Z_{k}^{n}+Y_{n,k}\right)-f\left(Z_{k}^{n}+\tilde{Y}_{n,k}\right) & = & f'\left(Z_{n}^{k}\right)\left(Y_{n,k}-\tilde{Y}_{n,k}\right)+\frac{1}{2}f''\left(Z_{k}^{n}\right)\left(Y_{n,k}^{2}-\tilde{Y}_{n,k}^{2}\right)\\
- &  & +R\left(Z_{k}^{n},Y_{n,k}\right)-R\left(Z_{k}^{n},\tilde{Y}_{n,k}\right)
-\end{eqnarray*}
-Nun sind $Z_{k}^{n},Y_{n,k},\tilde{Y}_{n,k}$ unabhängig. Also 
-\[
-\mathbb{E}\left[f'\left(Z_{k}^{n}\right)\left(Y_{n,k}-\tilde{Y}_{n,n}\right)\right]=\underset{<\infty}{\underbrace{\mathbb{E}\left[f'\left(Z_{k}^{n}\right)\right]}}\mathbb{E}\left[Y_{n,k}-\tilde{Y}_{n,k}\right]
-\]
-Analog, da $\tilde{Y}_{n,k}\sim\mathcal{N}\left(0,Var\left(Y_{n,k}\right)\right)$
-auch 
-\[
-\mathbb{E}\left[f''\left(Z_{k}^{n}\right)\left(Y_{n,k}^{2}-\tilde{Y}_{n,k}^{2}\right)\right]=0
-\]
-Also 
-\[
-\left|\int fd\mu_{n}-\int fd\mu\right|\leq\sum_{k=1}^{n}\left(\mathbb{E}_{n}\left|R\left(Z_{k}^{n},Y_{n,k}\right)\right|+\mathbb{E}\left|R_{n}\left(Z_{k}^{n},\tilde{Y}_{n,k}\right)\right|\right)=:R_{n}
-\]
-z.z.: $R_{n}\to0$\\
-Es gelte \textbf{(A')}. Wir verwenden die Darstellung \textbf{(a)}
-für den Restterm. Es gilt , da $\tilde{Y}_{n,k}$ normalverteilt 
-\begin{eqnarray*}
-\mathbb{E}_{n}\left[\left|\tilde{Y}_{n,k}\right|^{3}\right] & = & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[\tilde{Y}_{n,k}\right]^{\frac{3}{2}}\\
- & = & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[Y_{n,k}^{2}\right]^{\frac{3}{2}}\\
- & \overset{\mbox{Jensen}}{\leq} & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[Y_{n,k}^{3}\right]
-\end{eqnarray*}
-Es gilt für $X\sim\mathcal{N}\left(0,\sigma^{2}\right)$:
-\[
-\mathbb{E}\left[\left|X\right|^{3}\right]=\sqrt{\frac{8}{\pi}}\sigma^{3}
-\]
-Also mit \textbf{(a)} 
-\[
-R_{n}\leq\sum C\cdot\gamma_{n}\left(1+\sqrt{\frac{8}{\pi}}\right)
-\]
-und 
-\[
-R_{n}\to0
-\]
-nach Voraussetzung. Es gelte \textbf{(C)}. Sei 
-\[
-\tilde{Y}_{n}=\sqrt{n}\tilde{Y}_{n,1}
-\]
-Dann 
-\[
-\tilde{Y}_{n}\sim\mathcal{N}\left(0,n\cdot Var\left(Y_{n,1}\right)\right)=\mathcal{N}\left(0,Var\left(Y\right)\right)
-\]
- Dann folgt aus \textbf{(b)} 
-\begin{eqnarray*}
-\sum_{k=1}^{n}\left(\mathbb{E}\left[\delta\left(\frac{Y}{\sqrt{n}}\right)\frac{Y^{2}}{n}\right]+\mathbb{E}_{n}\left[\delta\left(\frac{\tilde{Y}_{n}}{\sqrt{n}}\right)\frac{\tilde{Y}_{n}^{2}}{n}\right]\right)
-& \leq &
-\mathbb{E}_{n}\left[\underset{\to0}{\underbrace{\delta\left(\frac{Y}{\sqrt{n}}\right)}}\cdot
-  Y^{2}\right] \\
-& & -\int\underset{\to0}{\underbrace{\delta\left(\frac{Y}{\sqrt{n}}\right)}}\cdot Y^{2}d\mathcal{N}\left(0,Var\left(Y\right)\right)\\
- & \to & 0\mbox{ nach Lebesque.}
-\end{eqnarray*}
-Bemerke für $Y$: $P_{\frac{Y}{\sqrt{n}}}=P_{Y_{n,k}}$
-\end{description}
+    \begin{itemize}
+    \item $Y_{n,1}\ldots Y_{n,n}$ unabhängig
+    \item $\tilde{Y}_{n,k}\sim\mathcal{N}\left(0,Var\left(Y_{n,k}\right)\right)$
+      \begin{eqnarray*}
+        \Omega_{n} & = & \mathbb{R}^{n}\times\mathbb{R}^{n}\\
+        \mathcal{A}_{n} & = & \mathcal{B}\left(\mathbb{R}^{n}\times\mathbb{R}^{n}\right)\\
+        \mathbb{P}_{n} & = & \underset{\mbox{Verteilung von }Y_{n,1}}{\underbrace{\nu_{1}\otimes\ldots\otimes\nu_{n}}\otimes\tilde{\nu_{1}}\otimes\ldots\otimes\tilde{\nu}_{n}\leftarrow\mathcal{N}\left(0,Var\left(Y_{n,n}\right)\right)}
+      \end{eqnarray*}
+      und 
+      \[
+      \omega=\left(y_{1},\ldots,y_{n},\tilde{y}_{1},\ldots,\tilde{y}_{n}\right)
+      \]
+      sei 
+      \[
+      Y_{n,k}\left(\omega\right)=y_{k},\tilde{Y}_{n,k}\left(\omega\right)=\tilde{y}_{k}
+      \]
+      Dann gilt
+      \[
+      \tilde{S}_{n}=\tilde{Y}_{n,1}+\ldots+\tilde{Y}_{n,n}\sim\mathcal{N}\left(0,1\right)
+      \]
+      Wir vergleichen $\tilde{S}_{n}$ mit $S_{n}^{*}$
+    \end{itemize}
+  \item [{(d)}] Sei dazu 
+    \[
+    Z_{k}^{n}=\tilde{Y}_{n,1}+\ldots+\tilde{Y}_{n,\underline{k-1}}+Y_{n,\underline{k+1}}+\ldots+Y_{n,n}
+    \]
+    Dann gilt
+    \begin{eqnarray*}
+      \left|\int fd\mu_{n}-\int fd\mu\right| & = & \left|\mathbb{E}_{n}\left[f\left(S_{n}^{*}\right)\right]-\mathbb{E}_{n}\left[f\left(\tilde{S}_{n}\right)\right]\right|\\
+      & \leq & \left|\mathbb{E}_{n}\left[f\left(S_{n}^{*}\right)-f\left(\tilde{S}_{n}\right)\right]\right|\\
+      & = & \left|\mathbb{E}_{n}\left[\sum_{k=1}^{n}f\left(\underset{=A_{k}}{\underbrace{Z_{k}^{n}+Y_{n,k}}}\right)-f\left(\underset{=B_{k}}{\underbrace{Z_{k}^{n}+\tilde{y}_{n,k}}}\right)\right]\right|
+    \end{eqnarray*}
+    wobei $\mathbb{E}_{n}$ den Erwartungswert bzgl. $\mathbb{P}_{n}$
+    bezeichnet und 
+    \[
+    A_{k}=B_{k-1}
+    \]
+    dies folgt aus 
+    \[
+    Z_{k}^{n}=\tilde{Y}_{n,1}+\ldots+\underset{A_{k}}{\underbrace{\tilde{Y}_{n,\underline{k-1}}}}+\underset{B_{k}}{\underbrace{Y_{n,k}}}+Y_{n,\underline{k+1}}+\ldots+Y_{n,n}
+    \]
+    Taylor liefert 
+    \begin{eqnarray*}
+      f\left(Z_{k}^{n}+Y_{n,k}\right)-f\left(Z_{k}^{n}+\tilde{Y}_{n,k}\right) & = & f'\left(Z_{n}^{k}\right)\left(Y_{n,k}-\tilde{Y}_{n,k}\right)+\frac{1}{2}f''\left(Z_{k}^{n}\right)\left(Y_{n,k}^{2}-\tilde{Y}_{n,k}^{2}\right)\\
+      &  & +R\left(Z_{k}^{n},Y_{n,k}\right)-R\left(Z_{k}^{n},\tilde{Y}_{n,k}\right)
+    \end{eqnarray*}
+    Nun sind $Z_{k}^{n},Y_{n,k},\tilde{Y}_{n,k}$ unabhängig. Also 
+    \[
+    \mathbb{E}\left[f'\left(Z_{k}^{n}\right)\left(Y_{n,k}-\tilde{Y}_{n,n}\right)\right]=\underset{<\infty}{\underbrace{\mathbb{E}\left[f'\left(Z_{k}^{n}\right)\right]}}\mathbb{E}\left[Y_{n,k}-\tilde{Y}_{n,k}\right]
+    \]
+    Analog, da $\tilde{Y}_{n,k}\sim\mathcal{N}\left(0,Var\left(Y_{n,k}\right)\right)$
+    auch 
+    \[
+    \mathbb{E}\left[f''\left(Z_{k}^{n}\right)\left(Y_{n,k}^{2}-\tilde{Y}_{n,k}^{2}\right)\right]=0
+    \]
+    Also 
+    \[
+    \left|\int fd\mu_{n}-\int fd\mu\right|\leq\sum_{k=1}^{n}\left(\mathbb{E}_{n}\left|R\left(Z_{k}^{n},Y_{n,k}\right)\right|+\mathbb{E}\left|R_{n}\left(Z_{k}^{n},\tilde{Y}_{n,k}\right)\right|\right)=:R_{n}
+    \]
+    z.z.: $R_{n}\to0$\\
+    Es gelte \textbf{(A')}. Wir verwenden die Darstellung \textbf{(a)}
+    für den Restterm. Es gilt , da $\tilde{Y}_{n,k}$ normalverteilt 
+    \begin{eqnarray*}
+      \mathbb{E}_{n}\left[\left|\tilde{Y}_{n,k}\right|^{3}\right] & = & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[\tilde{Y}_{n,k}\right]^{\frac{3}{2}}\\
+      & = & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[Y_{n,k}^{2}\right]^{\frac{3}{2}}\\
+      & \overset{\mbox{Jensen}}{\leq} & \sqrt{\frac{8}{\pi}}\mathbb{E}\left[Y_{n,k}^{3}\right]
+    \end{eqnarray*}
+    Es gilt für $X\sim\mathcal{N}\left(0,\sigma^{2}\right)$:
+    \[
+    \mathbb{E}\left[\left|X\right|^{3}\right]=\sqrt{\frac{8}{\pi}}\sigma^{3}
+    \]
+    Also mit \textbf{(a)} 
+    \[
+    R_{n}\leq\sum C\cdot\gamma_{n}\left(1+\sqrt{\frac{8}{\pi}}\right)
+    \]
+    und 
+    \[
+    R_{n}\to0
+    \]
+    nach Voraussetzung. Es gelte \textbf{(C)}. Sei 
+    \[
+    \tilde{Y}_{n}=\sqrt{n}\tilde{Y}_{n,1}
+    \]
+    Dann 
+    \[
+    \tilde{Y}_{n}\sim\mathcal{N}\left(0,n\cdot Var\left(Y_{n,1}\right)\right)=\mathcal{N}\left(0,Var\left(Y\right)\right)
+    \]
+    Dann folgt aus \textbf{(b)} 
+    \begin{eqnarray*}
+      \sum_{k=1}^{n}\left(\mathbb{E}\left[\delta\left(\frac{Y}{\sqrt{n}}\right)\frac{Y^{2}}{n}\right]+\mathbb{E}_{n}\left[\delta\left(\frac{\tilde{Y}_{n}}{\sqrt{n}}\right)\frac{\tilde{Y}_{n}^{2}}{n}\right]\right)
+      & \leq &
+      \mathbb{E}_{n}\left[\underset{\to0}{\underbrace{\delta\left(\frac{Y}{\sqrt{n}}\right)}}\cdot
+        Y^{2}\right] \\
+      & & -\int\underset{\to0}{\underbrace{\delta\left(\frac{Y}{\sqrt{n}}\right)}}\cdot Y^{2}d\mathcal{N}\left(0,Var\left(Y\right)\right)\\
+      & \to & 0\mbox{ nach Lebesque.}
+    \end{eqnarray*}
+    Bemerke für $Y$: $P_{\frac{Y}{\sqrt{n}}}=P_{Y_{n,k}}$
+  \end{description}
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Vorlesung 1.7.2013 Ausgelassen
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Vorlesung 3.7.2013
 
 \chapter{Elemente Mathematischer Statistik}
@@ -3685,24 +3690,24 @@ wahrer Parameter ist.
 Konstruiere einen Schätzer für $\theta_{0}$ basierend auf der Realisierung
 $x^{\left(n\right)}=\left(X_{1}\ldots X_{n}\right)$ der Stichprobe
 \begin{eqnarray*}
-X^{\left(n\right)} & = & \left(X_{1}\ldots X_{n}\right)\\
-X^{\left(n\right)}\left(\omega\right) & < & x^{\left(n\right)}
+  X^{\left(n\right)} & = & \left(X_{1}\ldots X_{n}\right)\\
+  X^{\left(n\right)}\left(\omega\right) & < & x^{\left(n\right)}
 \end{eqnarray*}
 
 \begin{defn}
-Seien 
-\[
-g:\Theta\mapsto\mathbb{R}^{m}
-\]
-und
-\[
-\tilde{G}_{n}:\mathbb{R}^{n}\to\mathbb{R}^{m}
-\]
-meßbar. Dann heißt
-\[
-\hat{G}_{n}\left(X^{\left(n\right)}\right)
-\]
-\index{Schätzer}\emph{Schätzer} für $g\left(\theta\right)$.
+  Seien 
+  \[
+  g:\Theta\mapsto\mathbb{R}^{m}
+  \]
+  und
+  \[
+  \tilde{G}_{n}:\mathbb{R}^{n}\to\mathbb{R}^{m}
+  \]
+  meßbar. Dann heißt
+  \[
+  \hat{G}_{n}\left(X^{\left(n\right)}\right)
+  \]
+  \index{Schätzer}\emph{Schätzer} für $g\left(\theta\right)$.
 \end{defn}
 Typisches Beispiel
 \[
@@ -3714,81 +3719,81 @@ und
 \]
 Schätzer per Durchschnitt.
 \begin{defn}
-Die Schätzung $\hat{G}_{n}\left(X^{\left(n\right)}\right)$ von $g\left(\theta\right)$
-heißt \index{erwartungstreu}\emph{erwartungstreu}, falls 
-\[
-\mathbb{E}_{\mathbb{P}_{\theta}}\left[\hat{G}_{n}\left(X^{\left(n\right)}\right)\right]=g\left(\theta\right)\quad\forall\theta\in\Theta
-\]
-Die Funktion 
-\[
-\mathbb{E}_{\mathbb{P}_{\theta}}\left[\hat{G}_{n}\left(X^{\left(n\right)}\right)\right]-g\left(\theta\right)
-\]
-heißt \index{systematischer Fehler}\emph{systematischer Fehler} oder
-\index{Bias}Bias.\end{defn}
+  Die Schätzung $\hat{G}_{n}\left(X^{\left(n\right)}\right)$ von $g\left(\theta\right)$
+  heißt \index{erwartungstreu}\emph{erwartungstreu}, falls 
+  \[
+  \mathbb{E}_{\mathbb{P}_{\theta}}\left[\hat{G}_{n}\left(X^{\left(n\right)}\right)\right]=g\left(\theta\right)\quad\forall\theta\in\Theta
+  \]
+  Die Funktion 
+  \[
+  \mathbb{E}_{\mathbb{P}_{\theta}}\left[\hat{G}_{n}\left(X^{\left(n\right)}\right)\right]-g\left(\theta\right)
+  \]
+  heißt \index{systematischer Fehler}\emph{systematischer Fehler} oder
+  \index{Bias}Bias.\end{defn}
 \begin{example}
- \  \label{BSP33}\end{example}
+  \  \label{BSP33}\end{example}
 \begin{description}
 \item [{(a)}] Der Erwartungswert von $X$ sei unbekannt
-\[
-\mu\left(\theta\right)=\mathbb{E}_{\theta}\left[X\right]\quad\left(\mathbb{E}_{\theta}=\mathbb{E}_{\mathbb{P}_{\theta}}\right)
-\]
-Sei $\alpha=\left(\alpha_{1}\ldots\alpha_{n}\right)$ mit $\alpha_{i}>0$,
-$\sum_{i=1}^{n}\alpha_{i}=1$. Dann ist
-\[
-\hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)=\sum_{i=1}^{n}\alpha_{i}X_{i}
-\]
-erwartungstreuer Schätzer
-\begin{eqnarray*}
-\mathbb{E}_{\theta}\left[\hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)\right] & = & \sum_{i=1}^{n}\alpha_{i}\underset{\equiv\mathbb{E}_{\theta}X_{i}=\mu\left(\theta\right)}{\underbrace{\mathbb{E}_{\theta}X_{i}}}\\
- & = & \mu\left(\theta\right)\ \forall\theta\in\Theta
-\end{eqnarray*}
-(Im Mittel spuckt der ,,naive`` Schätzer das richtige aus.)
+  \[
+  \mu\left(\theta\right)=\mathbb{E}_{\theta}\left[X\right]\quad\left(\mathbb{E}_{\theta}=\mathbb{E}_{\mathbb{P}_{\theta}}\right)
+  \]
+  Sei $\alpha=\left(\alpha_{1}\ldots\alpha_{n}\right)$ mit $\alpha_{i}>0$,
+  $\sum_{i=1}^{n}\alpha_{i}=1$. Dann ist
+  \[
+  \hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)=\sum_{i=1}^{n}\alpha_{i}X_{i}
+  \]
+  erwartungstreuer Schätzer
+  \begin{eqnarray*}
+    \mathbb{E}_{\theta}\left[\hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)\right] & = & \sum_{i=1}^{n}\alpha_{i}\underset{\equiv\mathbb{E}_{\theta}X_{i}=\mu\left(\theta\right)}{\underbrace{\mathbb{E}_{\theta}X_{i}}}\\
+    & = & \mu\left(\theta\right)\ \forall\theta\in\Theta
+  \end{eqnarray*}
+  (Im Mittel spuckt der ,,naive`` Schätzer das richtige aus.)
 \item [{(b)}] Sei $\alpha_{i}\equiv\frac{1}{n}$. Dann ist
-\[
-\hat{\sigma}_{n}^{2}\left(X^{\left(n\right)}\right)=\frac{1}{n}\sum_{k=1}^{n}\left(X_{k}-\hat{\mu}_{n}\right)^{2}
-\]
-ist \emph{kein} erwartungstreuer Schätzer für $\sigma^{2}$. Denn
-\begin{eqnarray*}
-\mathbb{E}_{\theta}\left[\hat{\sigma}_{n}^{2}\right] & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}\left[X_{k}-\hat{\mu}_{n}\right]^{2}\\
- & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}_{\theta}\left[X_{k}-\mu+\mu-\hat{\mu}_{n}\right]^{2}\\
- & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}\left[\left(X_{k}-\mu\right)^{2}-2\left(X_{k}-\mu\right)\left(\hat{\mu}_{n}-\mu\right)+\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
- & = & \frac{1}{n}\mathbb{E}_{\theta}\left[\sum_{k=1}^{n}\left(X_{k}-\mu\right)^{2}-2\sum_{k=1}^{n}\left(X_{k}-\mu\right)\left(\hat{\mu}_{n}-\mu\right)+n\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
- & = & \frac{1}{n}\mathbb{E}_{\theta}\left[\sum_{k=1}^{n}\left(X_{k}-\mu\right)^{2}-2n\left(\hat{\mu}_{n}-\mu\right)^{2}+n\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
- & = & \sigma^{2}-Var(\underset{\frac{1}{n}\sum_{i}X_{i}}{\underbrace{\hat{\mu}_{n}}})
-\end{eqnarray*}
-da $\hat{\mu}_{n}$ erwartungstreuer Schätzer
-\begin{eqnarray*}
- & = & \sigma^{2}-Var\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\\
- & = & \sigma^{2}-\frac{1}{n^{2}}\sum_{i=1}^{n}Var\left(X_{i}\right)\\
- & = & \sigma^{2}-\frac{1}{n}\sigma^{2}
-\end{eqnarray*}
-(erwartungstreuer Schätzer $=\sigma^{2}$). Der Bais ist 
-\[
-\mathbb{E}_{\theta}\left[\hat{\sigma}_{n}^{2}\right]-\sigma^{2}=-\frac{1}{n}\sigma^{2}
-\]
+  \[
+  \hat{\sigma}_{n}^{2}\left(X^{\left(n\right)}\right)=\frac{1}{n}\sum_{k=1}^{n}\left(X_{k}-\hat{\mu}_{n}\right)^{2}
+  \]
+  ist \emph{kein} erwartungstreuer Schätzer für $\sigma^{2}$. Denn
+  \begin{eqnarray*}
+    \mathbb{E}_{\theta}\left[\hat{\sigma}_{n}^{2}\right] & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}\left[X_{k}-\hat{\mu}_{n}\right]^{2}\\
+    & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}_{\theta}\left[X_{k}-\mu+\mu-\hat{\mu}_{n}\right]^{2}\\
+    & = & \frac{1}{n}\sum_{k=1}^{n}\mathbb{E}\left[\left(X_{k}-\mu\right)^{2}-2\left(X_{k}-\mu\right)\left(\hat{\mu}_{n}-\mu\right)+\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
+    & = & \frac{1}{n}\mathbb{E}_{\theta}\left[\sum_{k=1}^{n}\left(X_{k}-\mu\right)^{2}-2\sum_{k=1}^{n}\left(X_{k}-\mu\right)\left(\hat{\mu}_{n}-\mu\right)+n\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
+    & = & \frac{1}{n}\mathbb{E}_{\theta}\left[\sum_{k=1}^{n}\left(X_{k}-\mu\right)^{2}-2n\left(\hat{\mu}_{n}-\mu\right)^{2}+n\left(\hat{\mu}_{n}-\mu\right)^{2}\right]\\
+    & = & \sigma^{2}-Var(\underset{\frac{1}{n}\sum_{i}X_{i}}{\underbrace{\hat{\mu}_{n}}})
+  \end{eqnarray*}
+  da $\hat{\mu}_{n}$ erwartungstreuer Schätzer
+  \begin{eqnarray*}
+    & = & \sigma^{2}-Var\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\\
+    & = & \sigma^{2}-\frac{1}{n^{2}}\sum_{i=1}^{n}Var\left(X_{i}\right)\\
+    & = & \sigma^{2}-\frac{1}{n}\sigma^{2}
+  \end{eqnarray*}
+  (erwartungstreuer Schätzer $=\sigma^{2}$). Der Bais ist 
+  \[
+  \mathbb{E}_{\theta}\left[\hat{\sigma}_{n}^{2}\right]-\sigma^{2}=-\frac{1}{n}\sigma^{2}
+  \]
 \end{description}
 \begin{defn}
-Seien $\hat{G}_{n}\left(X^{(n)}\right)$ und $G_{n}^{*}\left(X^{(n)}\right)$
-erwartungstreue Schätzer für $g\left(\theta\right)$. Es heißt $\hat{G}_{n}$
-\emph{besser} \index{besser} als $G_{n}^{*}$, falls 
-\[
-Var\left(\hat{G}_{n}\right)\leq Var\left(G_{n}^{*}\right)
-\]
+  Seien $\hat{G}_{n}\left(X^{(n)}\right)$ und $G_{n}^{*}\left(X^{(n)}\right)$
+  erwartungstreue Schätzer für $g\left(\theta\right)$. Es heißt $\hat{G}_{n}$
+  \emph{besser} \index{besser} als $G_{n}^{*}$, falls 
+  \[
+  Var\left(\hat{G}_{n}\right)\leq Var\left(G_{n}^{*}\right)
+  \]
 \end{defn}
 \begin{example}
-Im Teil \textbf{(a)} aus Beispiel \ref{BSP33} gilt
-\[
-Var\left(\hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)\right)=\sigma^{2}\left(\theta\right)\sum_{i=1}^{n}\alpha_{i}^{2}
-\]
- Aufgabe also 
-\[
-\min\sum_{i=1}^{n}\alpha_{i}^{2}\mbox{ bzgl. }\alpha_{i}\geq0,\sum_{i=1}^{n}\alpha_{i}=1
-\]
-Lösung: 
-\[
-\alpha_{i}=\frac{1}{n}\quad\forall i
-\]
- 
+  Im Teil \textbf{(a)} aus Beispiel \ref{BSP33} gilt
+  \[
+  Var\left(\hat{\mu}_{\left(\alpha\right)}\left(X^{\left(n\right)}\right)\right)=\sigma^{2}\left(\theta\right)\sum_{i=1}^{n}\alpha_{i}^{2}
+  \]
+  Aufgabe also 
+  \[
+  \min\sum_{i=1}^{n}\alpha_{i}^{2}\mbox{ bzgl. }\alpha_{i}\geq0,\sum_{i=1}^{n}\alpha_{i}=1
+  \]
+  Lösung: 
+  \[
+  \alpha_{i}=\frac{1}{n}\quad\forall i
+  \]
+  
 \end{example}
 
 \paragraph*{Frage: }
@@ -3802,31 +3807,31 @@ Sei $X^{(n)}$ ein Stichprobe, $X_{i}\overset{\mathcal{D}}{=}X$ (iid)
 wir definieren die \emph{\index{Likelihoodfunktion}Likelihoodfunktion:}
 \begin{description}
 \item [{(a)}] $X$ hat eine Dichte 
-\[
-f_{\theta}\mbox{ bzgl. }\mathbb{P}_{\theta}\quad\left(\forall\theta\in\Theta\right)
-\]
+  \[
+  f_{\theta}\mbox{ bzgl. }\mathbb{P}_{\theta}\quad\left(\forall\theta\in\Theta\right)
+  \]
 
 \item [{(b)}] $X$ ist diskret mit möglichen Werten 
-\[
-\alpha_{k}\left(k\in\mathbb{N}\right)
-\]
-unabhängig von $\theta$. Im Fall \textbf{(a)} setzen wir 
-\[
-L^{X}\left(\theta,x\right)=f_{\theta}\left(x\right)
-\]
-Im Fall \textbf{(b)} 
-\[
-L^{X}\left(\theta,x\right)=\mathbb{P}_{\theta}\left(X=x\right)
-\]
+  \[
+  \alpha_{k}\left(k\in\mathbb{N}\right)
+  \]
+  unabhängig von $\theta$. Im Fall \textbf{(a)} setzen wir 
+  \[
+  L^{X}\left(\theta,x\right)=f_{\theta}\left(x\right)
+  \]
+  Im Fall \textbf{(b)} 
+  \[
+  L^{X}\left(\theta,x\right)=\mathbb{P}_{\theta}\left(X=x\right)
+  \]
 \end{description}
 \begin{defn}
-Es liege einer der obigen Fälle vor. Für jedes $x^{\left(n\right)}=\left(x_{1}\ldots x_{n}\right)\in\mathbb{R}^{n}$
-heißt 
-\[
-\theta\mapsto L_{n}\left(\theta,x^{\left(n\right)}\right)=\prod_{i=1}^{n}L^{X}\left(\theta,x_{i}\right)
-\]
-die \emph{Likelihoodfunktion}\index{Likelihoodfunktion} des statistischen
-Modells $\left(\Omega,\mathcal{A},\left(\mathbb{P}_{\theta}\right)_{\theta\in\Theta}\right)$.
+  Es liege einer der obigen Fälle vor. Für jedes $x^{\left(n\right)}=\left(x_{1}\ldots x_{n}\right)\in\mathbb{R}^{n}$
+  heißt 
+  \[
+  \theta\mapsto L_{n}\left(\theta,x^{\left(n\right)}\right)=\prod_{i=1}^{n}L^{X}\left(\theta,x_{i}\right)
+  \]
+  die \emph{Likelihoodfunktion}\index{Likelihoodfunktion} des statistischen
+  Modells $\left(\Omega,\mathcal{A},\left(\mathbb{P}_{\theta}\right)_{\theta\in\Theta}\right)$.
 \end{defn}
 
 \section{Cramer-Rao-Ungleichung}
@@ -3834,33 +3839,33 @@ Modells $\left(\Omega,\mathcal{A},\left(\mathbb{P}_{\theta}\right)_{\theta\in\Th
 Es gelte 
 \begin{description}
 \item [{(a)}] Die Abbildung $\theta\mapsto L_{n}\left(\theta,x^{\left(n\right)}\right)$
-ist für jedes $x^{(n)}\in\mathbb{R}^{n}$ differenzierbar und 
-\[
-grad(\underset{\log-\mbox{Likelihood}}{\underbrace{\ln L_{n}\left(\theta,X^{\left(n\right)}\right)}})
-\]
-ist ein zentrierter zufälliger Vektor mit endl. zweiten Momenten bzgl.
-aller $\mathbb{P}_{\theta}$. 
+  ist für jedes $x^{(n)}\in\mathbb{R}^{n}$ differenzierbar und 
+  \[
+  grad(\underset{\log-\mbox{Likelihood}}{\underbrace{\ln L_{n}\left(\theta,X^{\left(n\right)}\right)}})
+  \]
+  ist ein zentrierter zufälliger Vektor mit endl. zweiten Momenten bzgl.
+  aller $\mathbb{P}_{\theta}$. 
 \item [{(b)}] Die Fischer-Informationsmatrix mit $\left(\theta\in\mathbb{R}^{k}\right)$
-\begin{eqnarray*}
-\left(I_{n}\left(\theta\right)\right)_{1\leq i,j\leq k} & := & \left(\mathbb{E}_{\theta}\left[\frac{\partial}{\partial\theta_{i}}\ln L_{n}\left(\theta,X^{\left(n\right)}\right)\cdot\frac{\partial}{\partial\theta_{j}}\ln L_{n}\left(\theta,X^{\left(n\right)}\right)\right]\right)
-\end{eqnarray*}
-ist invertierbar für alle $\theta\in\Theta$. Dann gilt für jede Zufallsvariable
-\[
-Y=h\left(X^{\left(n\right)}\right)
-\]
-folgende Ungleichung:
-\[
-\mathbb{E}_{\theta}\left[Y-\mathbb{E}_{\theta}\left[Y\right]^{2}\right]\geq\left(grad\left(\mathbb{E}_{\theta}\left[Y\right]\right)\right)^{T}\left[I_{n}\left(\theta\right)\right]^{-1}
-\]
-Ist $Y$ ein erwartungstreuer Schätzer für $g\left(\theta\right)$,
-so folgt 
-\[
-\mathbb{E}_{\theta}\left[\left(Y-g\left(\theta\right)\right)^{2}\right]\geq\left(grad\left(g\left(\theta\right)\right)\right)^{T}\left[I_{n}\left(\theta\right)\right]^{-1}
-\]
-Für $k=1$ gilt also 
-\[
-Var_{\theta}\left(Y\right)\geq\frac{\left|g'\left(\theta\right)\right|^{2}}{I_{n}\left(\theta\right)}
-\]
+  \begin{eqnarray*}
+    \left(I_{n}\left(\theta\right)\right)_{1\leq i,j\leq k} & := & \left(\mathbb{E}_{\theta}\left[\frac{\partial}{\partial\theta_{i}}\ln L_{n}\left(\theta,X^{\left(n\right)}\right)\cdot\frac{\partial}{\partial\theta_{j}}\ln L_{n}\left(\theta,X^{\left(n\right)}\right)\right]\right)
+  \end{eqnarray*}
+  ist invertierbar für alle $\theta\in\Theta$. Dann gilt für jede Zufallsvariable
+  \[
+  Y=h\left(X^{\left(n\right)}\right)
+  \]
+  folgende Ungleichung:
+  \[
+  \mathbb{E}_{\theta}\left[Y-\mathbb{E}_{\theta}\left[Y\right]^{2}\right]\geq\left(grad\left(\mathbb{E}_{\theta}\left[Y\right]\right)\right)^{T}\left[I_{n}\left(\theta\right)\right]^{-1}
+  \]
+  Ist $Y$ ein erwartungstreuer Schätzer für $g\left(\theta\right)$,
+  so folgt 
+  \[
+  \mathbb{E}_{\theta}\left[\left(Y-g\left(\theta\right)\right)^{2}\right]\geq\left(grad\left(g\left(\theta\right)\right)\right)^{T}\left[I_{n}\left(\theta\right)\right]^{-1}
+  \]
+  Für $k=1$ gilt also 
+  \[
+  Var_{\theta}\left(Y\right)\geq\frac{\left|g'\left(\theta\right)\right|^{2}}{I_{n}\left(\theta\right)}
+  \]
 
 \end{description}
 
